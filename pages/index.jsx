@@ -13,7 +13,7 @@ export default function Home() {
         <title>Campo de busca</title>
       </Head>
       <header className="bg-yellow-300 py-3">
-        <form method="GET" action="/items" autocomplete="off" className="container mx-auto flex items-center justify-center">
+        <form method="GET" action="/items" autoComplete="off" className="container mx-auto flex items-center justify-center">
           <div aria-hidden="true" className="bg-auto bg-no-repeat h-7 w-10 mr-5" style={{"background-image": "url('/logo_small.png')"}}></div>
             <input
               type="text"
