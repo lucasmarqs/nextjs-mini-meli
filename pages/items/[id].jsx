@@ -1,6 +1,7 @@
 import Head from "next/head";
 import { fetchItem } from "@/lib/items";
 import Layout from "@/components/layout";
+import Breadcrumbs from "@/components/breadcrumbs";
 
 export default function ItemId({ item }) {
   return (
@@ -19,9 +20,7 @@ export default function ItemId({ item }) {
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
 
-      <div className="my-4">
-        BREADCRUMB
-      </div>
+      <Breadcrumbs items={[item.category_id]} />
 
       <article className="bg-white rounded-md p-6 mb-4">
         <div className="flex">
