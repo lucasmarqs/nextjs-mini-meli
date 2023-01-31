@@ -62,6 +62,12 @@ export default function ItemId({ item }) {
 export async function getServerSideProps({ query }) {
   const itemData = await fetchItem(query.id);
 
+  if (!itemData) {
+    return {
+      notFound: true,
+    }
+  }
+
   return {
     props: {
       searchTerm: query.search || null,

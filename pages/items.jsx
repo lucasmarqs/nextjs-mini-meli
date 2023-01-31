@@ -46,6 +46,15 @@ export default function Items({ searchResult, searchTerm }) {
 }
 
 export async function getServerSideProps({ query }) {
+  if (!query.search) {
+    return {
+      redirect: {
+        destination: '/',
+        permanent: true,
+      },
+    };
+  }
+
   const searchResult = await searchFor(query.search);
 
   return {
